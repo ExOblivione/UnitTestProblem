@@ -2,15 +2,15 @@
 
 namespace StringManipulation1
 {
-    class Manipulation
+    public class Manipulation
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             // I write out a test data
             Console.WriteLine(StringShift("Microsoft<<2"));
         }
 
-        static string StringShift(string input)
+        public static string StringShift(string input)
         {
             // variables for getting the operator indexes by trimming the input string
             // operatorr will store the found operator, before the trimming it's an empty string

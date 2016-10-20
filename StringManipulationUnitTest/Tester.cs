@@ -1,13 +1,12 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using StringManipulation1;
 
 namespace StringManipulationUnitTest
 {
     [TestClass]
     public class SMUTest
     {
-        Stringmanipulation1 testing = new Stringmanipulation1();
-
-
+        
         [TestMethod]
         public void TestMethod1()
         {
@@ -15,7 +14,7 @@ namespace StringManipulationUnitTest
             string expectedResult = "testword";
             string actualString = "testword>>11";
             
-            string actualResult = testing.StringShift(actualString);
+            string actualResult = Manipulation.StringShift(actualString);
             Assert.AreEqual(expectedResult, actualResult);
 
         }
@@ -27,7 +26,7 @@ namespace StringManipulationUnitTest
             string expectedResult = "cereferen";
             string actualString = "reference<<2";
 
-            string actualResult = testing.StringShift(actualString);
+            string actualResult = Manipulation.StringShift(actualString);
             Assert.AreEqual(expectedResult, actualResult);
         }
 
@@ -38,7 +37,7 @@ namespace StringManipulationUnitTest
             string expectedResult = "alyzean";
             string actualString = "analyze>>2";
 
-            string actualResult = testing.StringShift(actualString);
+            string actualResult = Manipulation.StringShift(actualString);
             Assert.AreEqual(expectedResult, actualResult);
         }
 
@@ -46,10 +45,10 @@ namespace StringManipulationUnitTest
         public void TestMethod4()
         {
             // This should pass, and would give this output: ionsolu
-            string expectedResult = "ionsolu";
+            string expectedResult = "ionsolut";
             string actualString = "solution<<3";
 
-            string actualResult = testing.StringShift(actualString);
+            string actualResult = Manipulation.StringShift(actualString);
             Assert.AreEqual(expectedResult, actualResult);
         }
 
@@ -60,7 +59,7 @@ namespace StringManipulationUnitTest
             string expectedResult = "rtiesprope";
             string actualString = "properties>>5";
 
-            string actualResult = testing.StringShift(actualString);
+            string actualResult = Manipulation.StringShift(actualString);
             Assert.AreEqual(expectedResult, actualResult);
         }
 
@@ -71,7 +70,7 @@ namespace StringManipulationUnitTest
             string expectedResult = "urationconfig";
             string actualString = "configuration<<7";
 
-            string actualResult = testing.StringShift(actualString);
+            string actualResult = Manipulation.StringShift(actualString);
             Assert.AreEqual(expectedResult, actualResult);
         }
     }
